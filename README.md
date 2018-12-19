@@ -13,9 +13,9 @@ Originally from https://github.com/anvaka/allpypi.
     npm install
 
 
-#####2. Add Data
+##### 2. Add Data
 Add file in `data/links.csv`. Should contain links as comma-separated entries. 
-Nodes without links should have a ` null` (note the preceding whitespace).
+Nodes without links should have a ' null' (note the preceding whitespace).
 
 Example:
 
