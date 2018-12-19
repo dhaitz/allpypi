@@ -1,44 +1,40 @@
-# allpypi
+# graph-layout-computation
 
-Layout for all PyPI packages. 
+This repository just takes an data input file (a csv file) and computes layout of the graph.
 
-All work of the pypi indexer is done by [@koder-ua](https://github.com/koder-ua/)
-who hacked together the [pypi crawler and graph extractor](https://github.com/koder-ua/python_deps/blob/master/deps.py)
-in 20 minutes (HUGE thanks!).
+Originally from https://github.com/anvaka/allpypi.
 
-This repository just takes his output (a csv-like file) and computes layout of the graph.
+## How to generate graph?
 
-# how to generate graph?
+##### 1. Clone repository
 
-Prerequisites
+    git clone https://github.com/anvaka/allpypi
+    cd allpypi
+    npm install
 
-1. You will need to download dependencies using `deps.py` (see [readme file](https://github.com/koder-ua/python_deps) for instructions). Once done, 
-save it into `data/packages.csv`.
-2. Install the layouter:
 
-```
-git clone https://github.com/anvaka/allpypi
-cd allpypi
-npm install
-```
+#####2. Add Data
+Add file in `data/packages.csv`. Should contain links as comma-separated entries. 
+Nodes without links should have a ` null` (note the preceding whitespace).
 
-Now you can perform the layout:
+Example:
 
-```
-node index.js
-```
+	node1,node2
+	node3,node10
+	node4, null
 
-Once layout is computed, you can use it with `anvaka/pm` visualization (see
+Apart from `packages.csv`, there should be no other files in the `data/` subfolder.
+
+
+##### 3. Compute Graph
+Now you can compute the layout:
+
+    node index.js
+
+
+Once the layout is computed, you can visualize it with `anvaka/pm` visualization (see
 [README.md](https://github.com/anvaka/pm) for details)
 
-## known bugs
-The PyPI doesn't expose dependencies in easy to consume way. They
-are declared as part of the setup script (setup.py). 
-
-The parser can only match dependencies with a simple regex. 
-Thus if your package uses complex setup.py script, most likely it
-will be rendered as a lonley star in the [final visualization](http://anvaka.github.io/pm/#/galaxy/python?cx=-2700&cy=377&cz=5622&lx=-0.0869&ly=-0.2315&lz=-0.0338&lw=0.9684&ml=150&s=1.75&l=1&v=2015-09-27T13-00-00Z).
-
-# license
+## License
 
 MIT
