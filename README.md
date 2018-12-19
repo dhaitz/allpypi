@@ -14,7 +14,7 @@ Originally from https://github.com/anvaka/allpypi.
 
 
 #####2. Add Data
-Add file in `data/packages.csv`. Should contain links as comma-separated entries. 
+Add file in `data/links.csv`. Should contain links as comma-separated entries. 
 Nodes without links should have a ` null` (note the preceding whitespace).
 
 Example:
@@ -23,7 +23,7 @@ Example:
 	node3,node10
 	node4, null
 
-Apart from `packages.csv`, there should be no other files in the `data/` subfolder.
+Apart from `links.csv`, there should be no other files in the `data/` subfolder.
 
 
 ##### 3. Compute Graph
