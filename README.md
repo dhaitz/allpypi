@@ -8,8 +8,8 @@ Originally from https://github.com/anvaka/allpypi.
 
 ##### 1. Clone repository
 
-    git clone https://github.com/anvaka/allpypi
-    cd allpypi
+    git clone https://github.com/dhaitz/graph-layout-computation
+    cd graph-layout-computation
     npm install
 
 
@@ -30,6 +30,11 @@ Apart from `links.csv`, there should be no other files in the `data/` subfolder.
 Now you can compute the layout:
 
     node index.js
+    
+The result are the files in the `data/` folder.
+Most important are `labels.json`, `links.bin` and `positions.bin`.
+
+Note: if you recompute the layout (e.g. with an updated `links.csv`), you have to delete the `.bin`files from the directory.
 
 
 Once the layout is computed, you can visualize it with `anvaka/pm` visualization (see
