@@ -6,15 +6,16 @@ Originally from https://github.com/anvaka/allpypi.
 
 ## How to generate graph?
 
-##### 1. Clone repository
+### 1. Clone repository
 
     git clone https://github.com/dhaitz/graph-layout-computation
     cd graph-layout-computation
     npm install
 
 
-##### 2. Add Data
-Add file in `data/links.csv`. Should contain links as comma-separated entries. 
+## 2. Add Data
+Add file in `data/links.csv`.
+Should contain links as comma-separated entries. 
 Nodes without links should have a ' null' (note the preceding whitespace).
 
 Example:
@@ -26,7 +27,7 @@ Example:
 Apart from `links.csv`, there should be no other files in the `data/` subfolder.
 
 
-##### 3. Compute Graph
+### 3. Compute Graph
 Now you can compute the layout:
 
     node index.js
@@ -37,9 +38,5 @@ Most important are `labels.json`, `links.bin` and `positions.bin`.
 Note: if you recompute the layout (e.g. with an updated `links.csv`), you have to delete the `.bin`files from the directory.
 
 
-Once the layout is computed, you can visualize it with `anvaka/pm` visualization (see
-[README.md](https://github.com/anvaka/pm) for details)
-
-## License
-
-MIT
+### 4. Visualize
+Once the layout is computed, you can visualize it with https://github.com/dhaitz/graph-visualization
